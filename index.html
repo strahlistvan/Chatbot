@@ -51,7 +51,7 @@
 					  </div>
 					</div>
 					<div class="incoming_msg">
-					  <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+					  <div class="incoming_msg_img"> <img src="robot-chef-cap-pizza-red-2.jpg" alt="sunil"> </div>
 					  <div class="received_msg">
 						<div class="received_withd_msg">
 						  <p>We work directly with our designers and suppliers,
@@ -73,8 +73,7 @@
 			</div>
 		</div>
 		<footer> 				  
-			  <p class="text-center top_spac"> Original template design by <a target="_blank" href="https://bootsnipp.com/snippets/featured/message-chat-box"> Sunil Rajput</a>
-			   - Modified by Stráhl István in 2018
+			  <p class="text-center top_spac"> Original template design by <a target="_blank" href="https://bootsnipp.com/snippets/featured/message-chat-box">Sunil Rajput</a>. PizzaBot icon from <a target="_blank" href="https://www.shutterstock.com/hu/image-vector/robot-chef-cap-pizza-red-icon-1045578646">shutterstock.com</a>
 			  </p>
 		</footer>
 		</div>
@@ -91,7 +90,7 @@
 				var incomingMsgDiv = $("<div></div>").attr("class", "incoming_msg").appendTo("#msg_history");
 				
 				var incomingMsgImgDiv = $("<div></div>").attr("class", "incoming_msg_img").appendTo(incomingMsgDiv);
-				$("<img></img>").attr({"src" : "https://ptetutorials.com/images/user-profile.png", "alt" : "PizzaBot"} )
+				$("<img></img>").attr({"src" : "robot-chef-cap-pizza-red-2.jpg", "alt" : "PizzaBot"} )
 								.appendTo(incomingMsgImgDiv);
 				
 				var receivedMsgDiv = $("<div></div>").attr("class", "received_msg").appendTo(incomingMsgDiv);
@@ -133,5 +132,22 @@
 			});
 		});
 	</script>
+	
+
+<script>
+	const client = new ApiAi.ApiAiClient({accessToken: 'a9afe2b99d104d4cbb44d832da33626d'});
+const promise = client.textRequest(longTextRequest);
+
+promise
+    .then(handleResponse)
+    .catch(handleError);
+
+function handleResponse(serverResponse) {
+        console.log(serverResponse);
+}
+function handleError(serverError) {
+        console.log(serverError);
+}
+</script>
 	
 </html>
